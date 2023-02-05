@@ -1,14 +1,13 @@
-const input = require("fs").readFileSync("/dev/stdin").toString();
+const input = parseInt(require("fs").readFileSync("/dev/stdin")+"");
 
-let result = parseInt(input);
 
-if(result > 89){
+if(input > 89){
     console.log("A")
-} else if(result > 79){
+} else if(input > 79){
     console.log("B")
-}  else if(result > 69){
+}  else if(input > 69){
     console.log("C")
-} else if(result > 59) {
+} else if(input > 59) {
     console.log("D")
 } else{
     console.log("F")
