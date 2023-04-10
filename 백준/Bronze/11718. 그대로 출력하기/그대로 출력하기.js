@@ -1,3 +1,3 @@
-const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
+const input = require("fs").readFileSync("/dev/stdin").toString().trim();
 
-console.log(input.join("\n"))
+console.log(input)
