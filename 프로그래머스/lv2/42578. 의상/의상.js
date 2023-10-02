@@ -2,8 +2,7 @@ function solution(clothes) {
     const map = new Map();
 
     for(let i=0; i<clothes.length; i++){
-        const cloth = clothes[i][0];
-        const clothType = clothes[i][1];
+        const [cloth, clothType] = clothes[i]
         const list = map.get(clothType) ?? new Array();
 
         list.push(cloth);
