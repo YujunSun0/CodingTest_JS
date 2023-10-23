@@ -1,6 +1,6 @@
 const [N,...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
 const stack = [];
-let results = "";
+const results = [];
 
 for (let i = 0; i < arr.length; i++) {
   let query = arr[i];
@@ -12,22 +12,22 @@ for (let i = 0; i < arr.length; i++) {
       break;
     case "2":
       if (stack.length > 0) {
-        results += `${stack.pop()}\n`;
+        results.push(stack.pop());
       } else {
-        results += `-1\n`;
+        results.push(-1);
       }
       break;
     case "3":
-      results += `${stack.length}\n`;
+      results.push(stack.length);
       break;
     case "4":
-      results += stack.length === 0 ? `1\n` : `0\n`;
+      results.push(stack.length === 0 ? 1 : 0);
       break;
     case "5":
       if (stack.length > 0) {
-        results += `${stack[stack.length - 1]}\n`;
+        results.push(stack[stack.length - 1]);
       } else {
-        results += `-1\n`
+        results.push(-1);
       }
       break;
     default:
@@ -35,4 +35,4 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log(results);
+console.log(results.join("\n"));
