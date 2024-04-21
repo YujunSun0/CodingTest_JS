@@ -1,6 +1,5 @@
 function solution(n) {
     const answer = Array.from({length:n}, () => []);
-    // 현재 행,열의 위치를 저장하는 변수
     let [x,y,i] = [0,0,1];
     let [low_left, low_right] = [0, n-1];
     let [column_top, column_bottom] = [0, n-1];
