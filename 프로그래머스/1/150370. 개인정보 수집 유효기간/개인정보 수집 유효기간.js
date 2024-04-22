@@ -14,7 +14,6 @@ function solution(today, terms, privacies) {
         date = new Date(date);
         date.setMonth(date.getMonth() + termsMap.get(type));
         // date가 todayDate보다 이전이면 파기 대상
-        console.log(date, todayDate);
         if (date.getTime() < todayDate.getTime()) {
             answer.push(idx + 1);
         }
